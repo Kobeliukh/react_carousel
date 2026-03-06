@@ -3,20 +3,20 @@ import { useState } from 'react';
 
 interface Props {
   images: string[];
-  itemWidth: number;
-  frameSize: number;
-  step: number;
-  animationDuration: number;
-  infinite: boolean;
+  itemWidth?: number;
+  frameSize?: number;
+  step?: number;
+  animationDuration?: number;
+  infinite?: boolean;
 }
 
 const Carousel = ({
   images,
-  itemWidth,
-  frameSize,
-  step,
-  animationDuration,
-  infinite,
+  itemWidth = 130,
+  frameSize = 3,
+  step = 3,
+  animationDuration = 1000,
+  infinite = false,
 }: Props) => {
   const buffer = frameSize + step;
 
