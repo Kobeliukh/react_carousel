@@ -109,7 +109,7 @@ const Carousel = ({
       <button
         data-cy={'next'}
         type="button"
-        disabled={!infinite && currentIndex === maxIndex}
+        disabled={!infinite && currentIndex >= maxIndex}
         onClick={() => {
           if (isAnimating) {
             return;
